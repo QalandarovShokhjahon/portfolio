@@ -1,0 +1,127 @@
+/* Custom CSS for Portfolio */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Base Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.6;
+}
+
+/* Ensure content is above background elements */
+section > div {
+    position: relative;
+    z-index: 1;
+}
+
+/* Text contrast for better readability */
+h1, h2, h3, h4, h5, h6 {
+    color: #f8fafc;
+}
+
+p, span, a, li {
+    color: #e2e8f0;
+}
+
+a {
+    color: #93c5fd;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #60a5fa;
+}
+
+/* Navigation */
+.nav-scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: #e5e7eb;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    background: #4f46e5;
+    border-radius: 3px;
+    transition: width 1s ease-in-out;
+}
+
+/* Project Cards */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+.form-input:focus {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    border-color: #6366f1;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Back to Top Button */
+.back-to-top {
+    transition: all 0.3s ease;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: #4338ca;
+    transform: translateY(-3px);
+}
